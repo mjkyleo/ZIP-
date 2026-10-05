@@ -1,0 +1,40 @@
+# ================= 项目 ZIP 密码恢复工具 .gitignore =================
+# 原则：只上传本项目的源码与文档；第三方二进制工具、加密数据、
+#       破解产物（含明文密码）一律不进仓库。
+
+# ---------- 第三方开源工具本体（体积大；README 已注明来源与下载方式）----------
+/hashcat-7.1.2/
+/john-1.9.0-jumbo-1-win64/
+
+# ---------- 工作数据目录（敏感：加密包 / 解密明文 / 破解出的密码）----------
+/workSpace/raw/*
+!/workSpace/raw/.gitkeep
+/workSpace/result/*
+!/workSpace/result/.gitkeep
+/workSpace/temp/
+
+# ---------- hashcat 运行副产物（pot 文件内含明文密码）----------
+hashcat.potfile
+hashcat.log
+*.restore
+
+# ---------- John the Ripper 运行副产物 ----------
+*.pot
+*.rec
+john.log
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ---------- 编辑器 / 系统 ----------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
