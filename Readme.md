@@ -57,8 +57,11 @@ E:\压缩包破解\
 | 组件 | 用途 | 说明 |
 |---|---|---|
 | Python 3.8+ | 运行主脚本 | 本机已验证 Python 3.14 / 3.11 |
-| hashcat 7.x | GPU 破解引擎 | 需要 OpenCL 运行环境；NVIDIA 卡用驱动自带 OpenCL 即可（无需 CUDA Toolkit） |
-| John the Ripper 1.9.0-jumbo-1 | 哈希提取 + CPU 破解 | 开箱即用，无需额外安装 |
+| hashcat 7.x | GPU 破解引擎 | **已随本仓库提供**（Windows 版）；需要 OpenCL 运行环境；NVIDIA 卡用驱动自带 OpenCL 即可（无需 CUDA Toolkit） |
+| John the Ripper 1.9.0-jumbo-1 | 哈希提取 + CPU 破解 | **已随本仓库提供**（Windows 版），开箱即用，无需额外安装 |
+
+> 仓库自包含：`git clone` 后即可直接运行 `crack_zip.py`，无需单独下载上述工具。
+> 仅当需要使用 Linux/macOS 或其他版本时，请前往官方渠道获取。
 
 > 关于 GPU：hashcat 同时支持 NVIDIA（CUDA/OpenCL）、AMD（OpenCL）、Intel（OpenCL）和纯 CPU。
 > 本机（RTX 3050 Laptop）已验证：`hashcat -I` 可识别 `NVIDIA GeForce RTX 3050 Laptop GPU`。
